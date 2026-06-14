@@ -1,0 +1,152 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+---
+
+GROUNDING RULES — non-negotiable:
+1. Only use facts from Anshika's background below. If not there, skip it.
+2. Never invent company names, role titles, project names, or metrics.
+3. Never copy language from the JD and present it as her experience.
+4. After each sentence, ask: "Is this in her background?" If no — delete it.
+
+---
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — only used to pick what's most relevant from her background:
+{{ jd }}
+{% endif %}
+
+---
+
+OUTPUT FORMAT — in exactly this order:
+
+Subject: <subject line>
+
+<catchy opening line>
+
+<paragraph 1>
+
+<paragraph 2>
+
+<paragraph 3>
+
+<closing line>
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+CITATIONS:
+[1] "<claim>" → background: "<source phrase>"
+[2] ...
+
+---
+
+== SUBJECT LINE ==
+Under 10 words. Sharp and specific to this role.
+Not a sentence — a label.
+Examples: "ML Intern → Production Inference at Palo Alto, May 2026" / "Re: {{ role }} — Anshika Bajpai"
+
+== CATCHY OPENING LINE ==
+ONE sentence. Standalone. Comes before paragraph 1.
+This MUST be specific to {{ company }} — not a generic line that could work for any company.
+
+Write a line that does ONE of these:
+A) Wordplay on {{ company }}'s name or product — clever and sharp:
+   - "Fireworks AI" → something about explosive speed, igniting inference, firing at full capacity
+   - "Sunbit" → "I won't let the sun set on a broken payment experience."
+   - Make it feel like you thought about this company, not just filled in a template.
+
+B) One sharp insight about what {{ company }} is specifically doing that an engineer would notice:
+   - NOT "I admire your mission" — an actual observation about their technical approach or market position
+   - For Fireworks AI: "Serving multiple open-source models at sub-100ms latency without forcing customers to pick one is a harder systems problem than it looks."
+   - Write a fresh one for {{ company }}.
+
+C) A punchy line about Anshika grounded in her background:
+   - ONLY if claims are in her background
+   - "Three years of production ML — from refactoring a 500-minute pipeline to under 3 minutes to deploying RAG on GCP at Palo Alto Networks."
+
+DO NOT use:
+- Generic lines that could apply to any company: "I don't need tickets handed to me — I find the problem, structure it, and ship" (this is a CLOSING line, not an opener)
+- "I came across", "I am excited", "I have always been fascinated"
+- Anything that doesn't mention or relate to {{ company }}
+
+== PARAGRAPH 1 — Company interest + who Anshika is (3–4 sentences) ==
+- What is {{ company }} doing and what specifically makes it interesting from an engineering perspective?
+  * Not a compliment — an observation. What's the hard part of what they do?
+  * Show you actually understand the company's technical challenge or market position.
+- One sentence: her degree (Master's in Data Science, Indiana University, May 2026) and actual years of experience from her background.
+- Do NOT use: "aligns perfectly", "I am drawn to", "cutting-edge", "I am confident that", "real-world"
+
+== PARAGRAPH 2 — Experience + projects + impact (4–5 sentences) ==
+Lead with work experience first, then projects. Every claim must be in her background.
+
+1. Name the actual company and role title from her background. What did she build? What was the measured impact? Connect it to what {{ company }} does.
+2. One or two relevant projects by their actual names. What did each do, what tech, what outcome. Tie to the role.
+
+**Bold** the strongest achievement or metric.
+Do not list skills here — save that for paragraph 3.
+
+== PARAGRAPH 3 — Skills + ownership + what she brings (4–5 sentences) ==
+No skill dumps. Weave skills into sentences naturally.
+Not: "I have skills in Python, Docker, Kubernetes..."
+Yes: "I've built production inference systems using Python and FastAPI, containerized with Docker and deployed on GCP."
+
+Work style based on company type:
+- Startup / early-stage: owns end-to-end, builds from scratch, ships fast, no hand-holding needed
+- Large company: cross-functional, scale, systems thinking, leadership
+- AI / research lab: rigorous evaluation, reproducible systems, model quality
+- Healthcare: reliability, sensitive data, operational impact
+- Fintech / infra: correctness, uptime, trust
+
+One sentence on what makes her different — specific combination from her background, not a generic claim.
+
+End with:
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+== CLOSING LINE ==
+ONE standalone sentence. After paragraph 3, before contact info.
+Must be specific to {{ company }} or this role — not a generic closer.
+Expresses what she believes she can do or contribute here.
+NOT: "I look forward to hearing from you", "I am eager to", "I would love to", "I look forward to the opportunity"
+
+Examples of the right tone — write a FRESH one for {{ company }}:
+- "When the model serving pipeline breaks at 2am, I want to be the one who already wrote the runbook."
+- "I'm ready to own inference reliability at {{ company }} from day one."
+- "If {{ company }} is moving fast on this, I can match that pace — and I've got the production scars to prove it."
+
+---
+
+TONE — most important rule:
+Write like a specific, smart person typed this themselves.
+Conversational. Short sentences. Active voice. First person.
+Every sentence must be specific enough to only work for THIS company and THIS role.
+If a sentence could appear in a letter to a different company — rewrite it.
+
+BANNED — do not use any of these:
+cutting-edge, innovative, robust, seamless, leveraged, passionate, excited about,
+thrilled, fascinated, realm, domain, real-world, dynamic, transformative, synergy,
+spearheaded, I am writing to express, I believe I would, I am confident that,
+I am a great fit, aligns perfectly, proven track record, I look forward to hearing from you,
+I am drawn to, unique opportunity, I am eager, empower, facilitate, ecosystem,
+journey, seasoned, meaningful contribution, delve, utilize, demonstrate, strong foundation,
+honed my skills, I am confident, I believe that
+
+FORMATTING:
+- **Bold** key achievements and metrics
+- No bullet points in the letter
+- No headers inside the letter
+- Contact info ONCE, at the very end, each on its own line
+- Zero commentary before or after the output
+
+Write now.

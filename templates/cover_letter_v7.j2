@@ -1,0 +1,136 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+STRICT RULE: Only use facts, companies, projects, and numbers from Anshika's background below. If it is not in her background, do not write it. No invented roles, metrics, companies, or projects.
+
+---
+
+ANSHIKA'S BACKGROUND — only source of truth:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — use only to decide what from her background is relevant. Do not copy its language. Do not use it to invent experience.
+{{ jd }}
+{% endif %}
+
+---
+
+GROUNDING RULES:
+1. Every claim about Anshika must exist in her background above.
+2. Her degree: Master's in Data Science, Indiana University, graduating May 2026. Never Bachelor's, never Computer Science, never another university.
+3. Only use job titles, company names, and roles explicitly in her background.
+4. Only use metrics and numbers explicitly in her background.
+5. Shorter honest letter beats longer hallucinated one.
+6. For every factual claim you make about Anshika (experience, project, skill, metric), silently note which part of her background it came from. If you cannot find it, do not write it.
+
+---
+
+OUTPUT ORDER:
+
+Subject: <subject line>
+
+<cover letter>
+
+---
+
+SUBJECT LINE:
+- Under 10 words, specific to this role and company
+- Sharp and human — like a real person's email subject
+- No emojis. No "excited about your mission."
+
+---
+
+COVER LETTER — 4 paragraphs:
+
+PARAGRAPH 1 — Catchy opening + company interest + Anshika intro:
+
+Opening line — make it memorable. Pick the best fit:
+- A catchy phrase or wordplay tied to the company name, their product, or their space. Example: if the company is "Fireworks AI" — lean into the name. If it is "Sunbit" — "we will never let the sun set on a bad payment experience." Be creative, sharp, and relevant.
+- OR a bold statement about what Anshika finds genuinely interesting or unique about what this company is doing — something specific, not generic praise. What makes their technical approach, their market position, or their product actually interesting to a smart engineer?
+- OR a punchy line about Anshika herself that is immediately relevant to this role — something that makes the reader want to keep reading.
+
+After the opening:
+- 1–2 sentences on what {{ company }} is doing and what Anshika finds interesting or unique about it. Make it feel like she actually thought about this company — their problem, their approach, something real. Not marketing copy.
+- One tight intro sentence: Master's in Data Science, Indiana University, May 2026, X years of experience (from her background).
+
+Identity openers ("As a researcher", "As a machine learning engineer", "As someone who") are allowed only if her background explicitly supports that claim for this role. If not, skip it.
+
+Do NOT use: "I am applying", "I came across", "I am excited", "I have always been fascinated", "I am writing to express."
+
+PARAGRAPH 2 — Experience + projects + impact:
+
+Prioritize in this order:
+1. Most relevant work experience or internship from her background. Name the actual company and role. Describe what she built, what it did, and the real impact — use only numbers from her background.
+2. Then 1–2 relevant projects from her background. Name them. What did she build, what tech did she use, what was the outcome. Tie each to what this role or company needs.
+
+Connect everything to what {{ company }} is building or solving. Make it feel like her background directly prepares her for this specific role.
+
+Bold the strongest achievement or metric from her background.
+
+PARAGRAPH 3 — Skills + ownership + contribution:
+
+Write this in a natural, confident tone — not a list, flowing sentences.
+
+- Mention the relevant technical skills she has that map to this role (from her background only).
+- Reflect ownership and contribution style based on company type:
+  * Startup / early-stage: "I have led end-to-end" — ownership, building from zero, shipping without hand-holding, moving fast, wearing multiple hats
+  * Large company: cross-functional leadership, operating at scale, influencing without authority, systems thinking
+  * AI / research lab: evaluation rigor, experimentation, model quality, reproducibility
+  * Healthcare: reliability, sensitive data, operational care delivery
+  * Fintech / infra: correctness, trust, uptime
+- Explain what she brings to the table that other candidates don't — her unique combination of skills, perspective, or experience.
+
+End with:
+My portfolio: https://bajpaianshika.netlify.app/
+Attaching my resume as well.
+
+PARAGRAPH 4 — Closing (3–4 lines):
+
+- One sentence that expresses her vision or what she believes she can achieve if given the opportunity — confident, forward-looking, specific to this company or role. Not "I look forward to hearing from you." Examples:
+  * "I believe the next step in [company's space] needs someone who can [specific thing] — and that is exactly what I am here to do."
+  * "I don't need tickets handed to me — I find the problem, structure it, and ship."
+  * "If you are building [X], I want to be the person who makes it production-ready."
+- Then contact info:
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Resume attached.
+
+---
+
+TONE:
+- Real, sharp, specific — not a performance of enthusiasm
+- Short sentences. First person. Active voice.
+- Confident without being arrogant
+- Personal enough that this letter cannot be sent to any other company
+- Show genuine interest through what you say, not through words like "passionate" or "excited"
+
+BANNED WORDS — do not use any of these:
+leveraged, passionate, excited about, thrilled, fascinated, realm, domain, real-world,
+cutting-edge, innovative, robust, seamless, dynamic, transformative, synergy, spearheaded,
+I am writing to express, I believe I would, I am confident that, I am a great fit,
+strong foundation, honed my skills, aligns perfectly, proven track record,
+I look forward to hearing from you, I am drawn to, unique opportunity,
+I am eager, empower, facilitate, landscape, ecosystem, journey, seasoned
+
+FORMATTING:
+- **Bold** key achievements, metrics, standout skills
+- No bullet points inside the letter
+- No headers inside the letter
+- Output subject line + letter only — no commentary before or after
+
+After the cover letter, add a section like this:
+
+---
+CITATIONS:
+List every factual claim you made about Anshika, and where in her background it came from. Format:
+- "[claim]" — from: [source in background]
+
+If you cannot find a source for something you wrote, flag it as: ⚠️ NOT FOUND IN BACKGROUND
+
+Write now.

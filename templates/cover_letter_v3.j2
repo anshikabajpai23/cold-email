@@ -1,0 +1,223 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+
+{% if person_name %}
+Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.
+{% endif %}
+
+Use ONLY the information provided below. Do not invent facts, numbers, roles, products, company details, startup experience, or results.
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio:
+https://bajpaianshika.netlify.app/
+
+{% if jd %}
+JOB DESCRIPTION:
+{{ jd }}
+{% endif %}
+
+{% if company_context %}
+COMPANY CONTEXT:
+{{ company_context }}
+{% endif %}
+
+TASK:
+Write a strong, natural, 3-paragraph cover letter and a short subject line.
+
+The cover letter should sound like Anshika herself wrote it: smart, honest, personal, sharp, and specific. It should not sound like a generic AI-generated cover letter.
+
+OUTPUT FORMAT:
+
+Subject: <short, specific subject line>
+
+<cover letter>
+
+STRICT FACT RULE:
+Use only Anshika’s actual background. Do not hallucinate.
+Do not say she worked at a startup unless her background says so.
+Do not create fake metrics like “30% increase in sales.”
+Do not call her a seasoned engineer, senior ML engineer, founding engineer, or applied ML engineer unless that is explicitly true.
+Her intro should match her actual profile: Master’s student in Data Science at Indiana University, 3+ years of software engineering experience, ML/AI internship/research/project experience.
+
+RELEVANCE PRIORITY:
+Before writing, silently decide:
+
+1. Which work experience or internship is most relevant to this role?
+2. Which project or research work best supports this role?
+3. Which skills from the job description Anshika actually has?
+4. What about the company genuinely connects with her background?
+5. What makes her different from a normal applicant?
+
+Use that evidence only. Skip anything unrelated.
+
+SUBJECT LINE RULE:
+Write one short subject line that feels specific to the company and role.
+Avoid generic subjects like:
+“Application for {{ role }}”
+“Cover Letter for {{ role }}”
+“Interested in {{ role }}”
+
+Better patterns:
+“{{ role }} | ML systems, production engineering, and applied AI”
+“Building reliable AI systems for {{ company }}”
+“Anshika Bajpai | {{ role }}”
+“Applied AI + production systems for {{ company }}”
+
+OPENING STYLE:
+Start with one catchy, natural line.
+
+The first line should either:
+
+* Say something specific and genuine about {{ company }}’s product, mission, users, or problem space, OR
+* Connect Anshika’s own working style to the role, OR
+* Frame the company’s problem in a way that feels thoughtful.
+
+It should make the reader feel this was written for them.
+
+Do NOT start with:
+“I am applying for…”
+“I came across…”
+“I am excited…”
+“I am writing to express…”
+“I have always been fascinated…”
+“What excites me…”
+
+Good opening style examples:
+
+* “The hard part of AI products is not the demo. It is making them reliable enough that people can actually depend on them.”
+* “{{ company }} stands out to me because it is solving a problem people feel directly, not just adding AI on top of an existing workflow.”
+* “I like products where the engineering disappears for the user, but the system underneath has to be very carefully built.”
+* “The kind of work I enjoy most is taking messy, open-ended problems and turning them into systems that people can use.”
+
+Do not copy these exactly every time. Adapt the opening to {{ company }} and {{ role }}.
+
+PARAGRAPH 1 REQUIREMENTS:
+4–6 sentences.
+Include:
+
+* Strong company/problem opening.
+* A natural one-line intro for Anshika.
+* The most relevant work experience or internship first.
+* Specific proof of ML/software/AI expertise using real companies, projects, systems, tools, or metrics from her background.
+* One sentence showing what makes her different.
+
+Use this intro only if it fits naturally:
+“I’m a Master’s student in Data Science at Indiana University, graduating in May 2026, with 3+ years of production software experience and hands-on ML/AI work across industry, research, and personal projects.”
+
+Do not overstate seniority.
+
+PARAGRAPH 2 REQUIREMENTS:
+4–6 sentences.
+Explain how Anshika can contribute to {{ company }} specifically.
+Tie her background to the role’s responsibilities and skills in the JD.
+Mention 1–2 relevant projects, research, or systems only if they support the role.
+Mention skills from the JD only if they exist in her background.
+Add a personal, human line about what she genuinely likes about the company, product, mission, or problem space.
+
+The personal line should sound like a real person, not marketing.
+Avoid fake praise like:
+“your cutting-edge innovation”
+“your dynamic team”
+“your groundbreaking mission”
+
+Better style:
+
+* “I like that this role is close to the actual product problem, not just model experimentation in isolation.”
+* “I like that the work sits between engineering quality and ML judgment, because that is where most AI systems either become useful or fall apart.”
+* “I care about this kind of product because small reliability mistakes can turn into real user trust issues.”
+
+Include this on its own line near the end of paragraph 2:
+My portfolio has more detail on the systems I’ve built: https://bajpaianshika.netlify.app/
+
+Also mention:
+Resume attached.
+
+PARAGRAPH 3 REQUIREMENTS:
+2–3 lines maximum.
+End with a confident, memorable line.
+Do not use “I look forward to hearing from you.”
+Do not sound desperate or overly formal.
+
+Closing line should match the role/company.
+Examples of acceptable closing tone:
+
+* “I don’t need problems handed to me fully structured. I find the gap, break it down, and ship.”
+* “I would bring the same mix of engineering discipline, ML judgment, and ownership to {{ company }}.”
+* “I am ready to contribute from day one, especially where the work needs both careful systems thinking and practical execution.”
+
+Then include contact info exactly:
+
+Anshika Bajpai
++1 (930) 204-3030
+[anshikabajpai23@gmail.com](mailto:anshikabajpai23@gmail.com)
+
+TONE RULES:
+Write in simple English.
+Use short, direct sentences.
+Make it conversational but polished.
+Sound like a smart student/engineer writing honestly.
+Do not sound like a corporate template.
+Do not use exaggerated confidence.
+Do not use “we” when referring to the company unless Anshika is clearly describing what she would contribute after joining.
+Write from Anshika’s perspective as the applicant.
+
+BANNED WORDS AND PHRASES:
+Do not use:
+
+leveraged
+passionate
+excited about
+thrilled
+fascinated by
+I am writing to express
+I believe I would
+I am confident that
+I am a great fit
+what excites me
+deeply interested
+strong foundation
+honed my skills
+robust
+cutting-edge
+innovative solutions
+dynamic team
+seamless
+impactful solutions
+unique opportunity
+aligns perfectly
+proven track record
+demonstrated ability
+I look forward to hearing from you
+
+Also avoid generic AI phrases like:
+“driving impact”
+“solving real-world problems”
+“at the intersection of”
+“make a meaningful contribution”
+“fast-paced environment” unless it is used naturally and specifically.
+
+FORMATTING RULES:
+
+* Exactly 3 paragraphs.
+* Paragraph 1 and 2 must be 4–6 sentences each.
+* Paragraph 3 must be 2–3 lines max.
+* No bullet points in the cover letter.
+* No “Dear Hiring Team” unless a specific person was provided.
+* Use markdown bold for 1–4 important achievements, skills, tools, or impact numbers.
+* Do not bold full sentences.
+* Put the portfolio link on its own line.
+* Mention “Resume attached.” naturally.
+* Do not add commentary before or after the cover letter.
+
+FINAL CHECK BEFORE OUTPUT:
+Make sure:
+
+* Every metric is from Anshika’s background.
+* Every company detail is supported by JD or company context.
+* The letter mentions relevant work/projects, not random impressive experience.
+* The tone feels personal and genuine.
+* The opening and ending are not generic.
+* It cannot be reused for another company without changes.
+
+Write the subject line and cover letter now.

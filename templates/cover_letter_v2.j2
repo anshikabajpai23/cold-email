@@ -1,0 +1,168 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+
+{% if person_name %}
+Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.
+{% endif %}
+
+Use the information below. Do not invent facts, numbers, products, company details, or experience.
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio:
+https://bajpaianshika.netlify.app/
+
+{% if jd %}
+JOB DESCRIPTION:
+{{ jd }}
+{% endif %}
+
+{% if company_context %}
+COMPANY CONTEXT FROM RAG:
+{{ company_context }}
+{% endif %}
+
+TASK:
+Write a natural, specific, 3-paragraph cover letter.
+
+The cover letter should sound like a real person wrote it, not a generic AI template. It should be confident, conversational, and sharp.
+
+CORE PRIORITY ORDER:
+
+1. Use relevant work experience or internship first if it matches the role.
+2. Then use the strongest relevant personal/research projects.
+3. Then mention skills/tools only when they support the role.
+4. Skip anything unrelated, even if impressive.
+
+OPENING RULE:
+Start with a strong company-specific opening.
+
+Do NOT start with:
+
+* “I am applying for…”
+* “I came across…”
+* “I am excited…”
+* “I am writing to express…”
+* “I have always been fascinated…”
+
+The opening should explain why {{ company }} matters in a natural way.
+
+If {{ company }} is a consumer-facing or well-known company:
+
+* Mention its real-world impact, user experience, scale, trust, convenience, or how people interact with it in daily life.
+* If Anshika may have personally used or encountered it, add a subtle personal touch without sounding forced.
+
+If {{ company }} is B2B, infrastructure, healthcare, fintech, developer tools, AI, or niche:
+
+* Mention the actual problem space.
+* Explain why the problem is hard, useful, or important.
+* Use general understanding from the job description and company context.
+* Do not overpraise or sound like marketing copy.
+
+If company details are weak or missing:
+
+* Focus on the role/problem space from the job description.
+* Do not fake recent product launches, news, or exact claims.
+
+CONTENT REQUIREMENTS:
+
+Paragraph 1:
+
+* Start with the company/problem framing.
+* Introduce Anshika in one tight sentence:
+  “I’m a Master’s student in Data Science at Indiana University, graduating May 2026, with 3+ years of production software and ML experience.”
+* Lead with the most relevant work experience/internship.
+* Include measurable impact where available.
+* Clearly show her unique skillset / what she brings to the table.
+* Bold the most important achievement, metric, or technical strength.
+
+Paragraph 2:
+
+* Explain how Anshika can contribute to {{ company }} specifically.
+* Connect her background to the role’s responsibilities.
+* Mention 1–2 relevant projects, systems, or skills.
+* Include soft skills based on company type:
+
+  * Startup / early-stage: ownership, ambiguity, speed, building from scratch, shipping without hand-holding.
+  * Large company: scale, reliability, cross-functional work, leadership, systems thinking.
+  * Research / AI lab: experimentation, evaluation, rigor, model quality, reproducibility.
+  * Healthcare / health tech: reliability, sensitive data, operational impact, care delivery.
+  * Fintech / security: trust, correctness, reliability, risk-aware engineering.
+* Include the portfolio link naturally:
+  “My portfolio has more detail on the systems I’ve built: https://bajpaianshika.netlify.app/”
+* Bold 1–3 important skills, projects, or impact points.
+
+Paragraph 3:
+
+* Maximum 2–3 lines.
+* End confidently.
+* Do not use “I look forward to hearing from you.”
+* Include contact info exactly as below.
+
+Anshika Bajpai
++1 (930) 204-3030
+[anshikabajpai23@gmail.com](mailto:anshikabajpai23@gmail.com)
+
+TONE RULES:
+Write in simple English.
+Use short, direct sentences.
+Sound like a smart student/engineer writing honestly.
+Make it specific enough that it cannot be sent to every company.
+
+Avoid overused AI-style phrases.
+
+BANNED WORDS AND PHRASES:
+Do not use any of these:
+
+* leveraged
+* passionate
+* excited about
+* thrilled
+* fascinated by
+* I am writing to express
+* I believe I would
+* I am confident that
+* I am a great fit
+* what excites me
+* deeply interested
+* strong foundation
+* honed my skills
+* robust
+* cutting-edge
+* innovative solutions
+* dynamic team
+* fast-paced environment, unless used naturally and specifically
+* seamless
+* impactful solutions
+* unique opportunity
+* aligns perfectly
+* proven track record
+* demonstrated ability
+* I look forward to hearing from you
+
+STYLE RULES:
+
+* No bullet points.
+* No subject line.
+* No “Dear Hiring Team” unless a specific person is provided.
+* Use markdown bold for important points.
+* Keep it to exactly 3 paragraphs.
+* Paragraph 1 and 2 should each be 4–6 sentences.
+* Paragraph 3 should be 2–3 lines max.
+* Do not add commentary before or after the cover letter.
+* Do not explain your choices.
+* Output only the final cover letter.
+
+RELEVANCE FILTER:
+Before writing, silently decide:
+
+* Which experience best matches this role?
+* Which project best supports this role?
+* Which company/problem framing sounds genuine?
+* Which skills make Anshika different from other applicants?
+
+Use only the strongest evidence.
+
+Do not mention LLaMA, QLoRA, RAG, medical imaging, Optum, Palo Alto Networks, or any project unless it is relevant to the role.
+
+Write the cover letter now.

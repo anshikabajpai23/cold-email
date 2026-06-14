@@ -1,0 +1,226 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+STRICT GROUNDING RULES — read before anything else:
+1. Every claim, number, company name, project name, and job title must come directly from Anshika's background below. If it is not there, do not write it.
+2. NEVER use "[Previous Company]" or any placeholder. Use the actual name from her background or rewrite the sentence without it.
+3. NEVER invent years of experience. Use only what is in her background.
+4. NEVER invent project names or metrics. Use actual names and numbers from her background, or skip them.
+5. After drafting, check each sentence: "Is this in her background?" If no — delete it.
+6. Do NOT lift phrases from the JD and present them as Anshika's experience.
+
+CITATION RULE — mandatory:
+After the cover letter, output a separate CITATIONS section listing every factual claim you made (company name, role title, project name, metric, technology) and where exactly in her background it came from. Format:
+[1] "claim you made" → source: <exact phrase from her background>
+[2] "claim you made" → source: <exact phrase from her background>
+...
+This forces you to verify every claim before writing it. If you cannot find the source, you must remove the claim from the letter.
+
+---
+
+ANSHIKA'S BACKGROUND — only source of truth:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — use only to decide which parts of her background are most relevant. Do not copy its language. Do not use it to invent her experience:
+{{ jd }}
+{% endif %}
+
+---
+
+OUTPUT FORMAT — produce exactly in this order:
+
+Subject: <subject line>
+
+<catchy opening line>
+
+<paragraph 1>
+
+<paragraph 2>
+
+<paragraph 3>
+
+<closing line>
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+CITATIONS:
+[1] "..." → source: <exact phrase from background>
+[2] "..." → source: <exact phrase from background>
+...
+
+---
+
+SUBJECT LINE:
+- Under 10 words, specific to this role at {{ company }}
+- Sharp and human — like a real person's email subject, not a template
+- Completely separate from the catchy opening line — they are different things
+- No emojis. No "excited about your mission."
+- Good examples: "ML Engineer who ships agentic systems in production" / "Re: {{ role }} — Anshika Bajpai" / "Data Science MS, IU — 3 years production ML"
+
+---
+
+CATCHY OPENING LINE (standalone — before paragraph 1 begins):
+This is ONE sentence. It stands alone. It is separate from the subject line.
+Pick the best fit for {{ company }} and {{ role }}:
+
+Option A — Wordplay tied to the company name or product:
+- "Fireworks AI" → play on ignition, speed, explosive performance, firing
+- "Sunbit" → "I'll never let the sun set on a broken payment experience."
+- "Palo Alto Networks" → play on guarding, perimeter, defense
+- Be clever but not forced. If it feels like a stretch, use Option B or C.
+
+Option B — A sharp observation about what {{ company }} is doing that a curious engineer would notice:
+- NOT a compliment. An observation about why the problem is hard, interesting, or different.
+- Example: "Scaling LLM inference to production speed without sacrificing model choice is not a DevOps problem — it is a systems research problem."
+- Example: "Most scheduling tools optimize for efficiency. Hospital workforce management has to optimize for humans — and that is a completely different problem."
+
+Option C — A punchy, relevant line about Anshika:
+- Only if it is grounded in her actual background.
+- Example: "Most engineers I know pick either research depth or shipping speed — I have spent three years doing both in production."
+
+This line must NOT be repeated in the letter body. It sets the tone, then the letter begins.
+
+---
+
+PARAGRAPH 1 — Company interest + Anshika intro (3–4 sentences):
+- 1–2 sentences on what {{ company }} is doing and what specifically makes it interesting from an engineering or product perspective. Not generic praise — something a smart person would actually notice about their approach, market position, or technical challenge.
+- One tight intro sentence: Master's in Data Science, Indiana University, May 2026, and her actual years of experience from her background (never invent this).
+- Identity openers ("As a researcher", "As a machine learning engineer", "As someone who") are allowed only if her background clearly supports that claim for this role.
+
+Do NOT use: "I am applying", "I came across", "I am excited", "I have always been fascinated", "I am writing to express", "aligns perfectly", "I am confident that", "I am drawn to."
+
+---
+
+PARAGRAPH 2 — Real experience + real projects + real impact (4–6 sentences):
+This paragraph must be entirely grounded in her background. Every sentence is citable.
+
+1. Lead with her most relevant work experience or internship. Use the EXACT company name and role title from her background. Describe what she built, what it did, the real measured impact — only numbers from her background. Then connect it to what {{ company }} is building.
+2. Follow with 1–2 specific projects by their ACTUAL names from her background. What did the project do, what tech did it use, what was the outcome. Tie each to the role's needs.
+
+**Bold** the strongest real achievement or metric.
+
+---
+
+PARAGRAPH 3 — Skills + ownership + what she brings (4–5 sentences):
+Write in flowing sentences, not a list.
+
+- Name specific technical skills from her background that map to this role.
+- Show her work style based on company type:
+  * Startup / early-stage: led end-to-end, built from zero, shipped without hand-holding, moved fast, owned the full problem
+  * Large company: worked cross-functionally, operated at scale, led teams, influenced without authority
+  * AI / research lab: ran rigorous experiments, evaluated model quality, built reproducible systems
+  * Healthcare: built for reliability, worked with sensitive data, understood operational care delivery
+  * Fintech / infra: built for correctness, trust, uptime
+- One sentence on what she brings that other candidates don't — a specific, real combination from her background.
+
+End paragraph 3 with (on their own lines):
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+
+CLOSING LINE (standalone — after paragraph 3, before contact info):
+One sentence. Confident, specific, human. Relevant to {{ company }} or this role.
+NOT: "I look forward to hearing from you", "I am eager to", "I would love to", "I am confident I will."
+It should feel like a real person's sign-off, not a formal letter ending.
+
+Good examples of the right tone (do not copy these — write a fresh one that fits {{ company }}):
+- "I don't need tickets handed to me — I find the problem, structure it, and ship."
+- "If you're moving fast on this, I'm ready to match that pace."
+- "Happy to get on a call and walk you through exactly what I've built."
+- "I'd rather show you than tell you — a quick call would go a long way."
+- "When the model is in production and things break at 2am, I want to be the one who already wrote the runbook."
+
+---
+
+FEW-SHOT EXAMPLES — study these for tone and structure. Do NOT copy them:
+
+EXAMPLE 1 (agentic systems, B2B startup):
+---
+Subject: ML Engineer who's shipped agentic systems at scale
+
+Most IT operations tooling is reactive — building agents that reason across dependency graphs to prevent incidents before they happen is a fundamentally harder problem.
+
+I'm a Master's student in Data Science at Indiana University (graduating May 2026) with 3+ years of production ML and software engineering experience. The problem Preemptive is solving is one I find genuinely compelling: most AIOps tools tell you what broke, not what was about to.
+
+At Palo Alto Networks, I built a **multi-turn conversational agent with context compression and sliding-window memory** serving 10,000+ employees, where reliability under real load was non-negotiable. I also built a multimodal agentic system evaluated at **91% tool-call accuracy with sub-200ms p95 latency**, and designed evaluation frameworks that continuously measured whether systems were actually working in production — not just passing tests.
+
+On the retrieval side, I've built RAG pipelines over complex, multi-source unstructured data with deduplication, content hashing, and real-time monitoring. I'm comfortable owning systems end-to-end: from the architecture decision to the production incident at 2am. What I bring is the rare combination of someone who can run an experiment and ship the result.
+
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+I don't need tickets handed to me — I find the problem, structure it, and ship.
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+---
+
+EXAMPLE 2 (healthcare AI, early-stage):
+---
+Subject: Founding AI Engineer — healthcare infra background
+
+YouShift is tackling something deceptively complex: hospital workforce management isn't just scheduling — it's coordinating clinicians, compliance, burnout constraints, and real-time operational chaos at once.
+
+I'm a Master's student in Data Science at Indiana University (graduating May 2026) with experience building production systems in healthcare and ML. Healthcare has been a consistent thread throughout my career.
+
+At Optum, I worked on **large-scale healthcare processing systems, reducing processing time from 500+ minutes to under 3 minutes** for operational workflows that directly supported care delivery. In research, I worked on medical imaging models — handling sensitive clinical data with reproducibility and rigor that production healthcare demands.
+
+I bring experience in Python, distributed data processing, production ML deployment, and system performance optimization. In an early-stage environment, I own problems end-to-end — from architecture to deployment to the Monday morning debrief with a hospital admin who just found an edge case.
+
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+If you're building the operating system for clinical teams, I want to be in the room where it gets designed.
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+---
+
+What these examples do right:
+- Subject and catchy opening line are DIFFERENT — subject is plain, opening line is punchy
+- Real company names, real project names, real metrics — nothing invented
+- Contact info appears ONCE, each item on its own line
+- Closing line is specific to the company/role, not generic
+- **Bold** used on strongest achievements
+
+---
+
+TONE RULES:
+- Conversational, direct, specific — like a smart person writing an email
+- Short sentences. Active voice. First person.
+- Show genuine interest through what you say about the company, not by claiming interest
+- Personal enough that this letter cannot be sent to any other company
+
+BANNED WORDS — do not use any of these:
+leveraged, passionate, excited about, thrilled, fascinated, realm, domain, real-world,
+cutting-edge, innovative, robust, seamless, dynamic, transformative, synergy, spearheaded,
+I am writing to express, I believe I would, I am confident that, I am a great fit,
+strong foundation, honed my skills, aligns perfectly, proven track record,
+I look forward to hearing from you, I am drawn to, unique opportunity,
+I am eager, empower, facilitate, landscape, ecosystem, journey, seasoned,
+[Previous Company], placeholder, meaningful contribution, delve, utilize
+
+FORMATTING:
+- **Bold** key achievements, metrics, standout skills — use markdown bold
+- No bullet points inside the letter
+- No headers inside the letter
+- Contact info appears EXACTLY ONCE — at the very end, each item on its own line
+- Output subject + catchy line + letter + closing line + contact info only — zero commentary
+
+Write now.

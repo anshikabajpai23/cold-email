@@ -1,0 +1,114 @@
+You are writing a cover letter and email subject line for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+STRICT RULE: Only use facts, companies, projects, and numbers that appear in Anshika's background below. If something is not there, do not make it up. No invented metrics, no fake companies, no hallucinated projects.
+
+---
+
+ANSHIKA'S BACKGROUND (read carefully — pull the most relevant parts):
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION (use this to decide what's relevant from her background):
+{{ jd }}
+{% endif %}
+
+---
+
+OUTPUT — produce in this exact order:
+
+Subject: <subject line>
+
+<cover letter>
+
+---
+
+SUBJECT LINE:
+- One line, under 10 words, specific to role + company
+- Tone: sharp, human, direct — like a confident person's email subject
+- Examples: "ML Engineer who ships agentic systems in production" / "Applied ML — Indiana University, May 2026" / "Re: {{ role }} at {{ company }} — Anshika Bajpai"
+- No emojis. No "excited about your mission."
+
+---
+
+COVER LETTER — 3 to 4 paragraphs:
+
+PARAGRAPH 1 — Company hook + who Anshika is:
+- Open with 1–2 sentences about {{ company }} that feel like genuine interest, not marketing copy.
+  * What are they actually building? What problem does it solve and why is that hard or important?
+  * If it is a consumer product or something Anshika may have used: add a personal touch — something specific she would notice as a user, not a PR talking point.
+  * If it is an AI/infra/B2B company: speak to the technical challenge or the gap in the market they are filling.
+  * The goal: make it clear she actually looked into this company, not just applied to 100 places.
+- Follow with one tight sentence introducing Anshika: degree, university (Indiana University), graduation (May 2026), years of experience.
+- Do NOT open with "I am applying", "I came across", "I am excited", "I have always been fascinated", "I am writing to express."
+
+PARAGRAPH 2 — Most relevant experience + proof:
+- This is the most important paragraph. Lead with her strongest, most relevant work experience or internship from her background. Name the company, what she built, what impact it had. Use real numbers if they exist in her background.
+- Then connect it directly to what {{ company }} is doing or what this role needs.
+- Bold the strongest achievement or metric.
+- Be specific enough that this paragraph could not appear in anyone else's cover letter.
+
+PARAGRAPH 3 — Projects + contribution + skills:
+- Mention 1–2 specific projects from her background that are relevant to this role. Name them, describe what they did, and tie them to the role's needs.
+- Explain concretely how she contributes to {{ company }} — not generic "I will bring value" but something tied to their product, stage, or technical challenge.
+- Reflect the right soft skills for the company type:
+  * Startup / early-stage: ownership, building from scratch, shipping without hand-holding, moving fast
+  * Large company: scale, cross-functional work, leadership, systems thinking
+  * AI / research lab: evaluation rigor, experimentation, model quality
+  * Healthcare: reliability, sensitive data, operational care delivery impact
+  * Fintech / infra: correctness, trust, uptime, risk-aware decisions
+- Bold 1–2 standout technical skills or project outcomes.
+- End with portfolio + resume mention:
+  My portfolio: https://bajpaianshika.netlify.app/
+  Attaching my resume as well.
+
+PARAGRAPH 4 — Closing (2–3 lines MAX):
+- One confident, specific closing line that fits this company/role. NOT "I look forward to hearing from you." Examples of the right tone:
+  * "I don't need tickets handed to me — I find the problem, structure it, and ship."
+  * "Happy to get on a call and show you what I have built."
+  * "If you are moving fast on this, I am ready to match that pace."
+  * "I would love to connect — even a 20-minute call would give me a clearer picture of what you are solving."
+- Then contact info on separate lines:
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+
+---
+
+TONE RULES:
+- Write like a real person — direct, warm, specific. Not a robot performing enthusiasm.
+- Short sentences. Active voice. First person.
+- Show genuine interest through what you say about the company, not through words like "passionate" or "excited."
+- Personal enough that the reader feels like Anshika wrote this for them, not for everyone.
+- Confident, not arrogant. Smart, not stiff.
+
+BANNED WORDS AND PHRASES — do not use any of these:
+leveraged, passionate, excited about, thrilled, fascinated, realm, domain, I am writing to express,
+I believe I would, I am confident that, I am a great fit, what excites me, deeply interested,
+strong foundation, honed my skills, robust, cutting-edge, innovative solutions, dynamic team,
+seamless, impactful solutions, aligns perfectly, proven track record, demonstrated ability,
+I look forward to hearing from you, seasoned, I am drawn to, it is my pleasure,
+unique opportunity, I am eager, I would love to, spearheaded, synergy, utilize, facilitate,
+transformative, empower, landscape, ecosystem, journey
+
+FORMATTING:
+- Use **bold** for key achievements, metrics, and standout skills
+- No bullet points inside the letter
+- No headers inside the letter
+- No commentary before or after — output subject line + letter only
+- 3 to 4 paragraphs, no more
+
+BEFORE WRITING — silently answer these:
+1. What is {{ company }} actually doing, and why does it matter? (use JD + general knowledge)
+2. Which of Anshika's experiences directly maps to this role?
+3. Which 1–2 projects from her background are most relevant?
+4. What makes her different from 100 other applicants here?
+5. What closing line fits this company's culture?
+
+Use only the strongest evidence. Do not pad. Every sentence must earn its place.
+
+Write now.

@@ -1,0 +1,179 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+---
+
+STRICT GROUNDING RULES — read before writing anything:
+1. Every claim, number, company name, project name, job title must come directly from Anshika's background below. If it is not there, do not write it.
+2. NEVER use "[Previous Company]" or any placeholder — use the actual name from her background or rewrite the sentence without it.
+3. NEVER invent years of experience — use only what is explicitly stated in her background.
+4. NEVER invent metrics — use only numbers that exist in her background, or skip them entirely.
+5. NEVER copy vocabulary or phrases from the JD and present them as her experience.
+6. After writing each sentence, ask: "Can I point to this in her background?" If no — delete it.
+7. Output a CITATIONS block at the end with every factual claim traced to her background.
+
+---
+
+ANSHIKA'S BACKGROUND — only source of truth:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — use only to decide which parts of her background are most relevant. Do NOT copy its language or use it to invent experience:
+{{ jd }}
+{% endif %}
+
+---
+
+BEFORE WRITING — silently decide:
+1. What is {{ company }} actually doing and why is it hard or interesting?
+2. Which work experience or internship in her background is most relevant to this role?
+3. Which 1–2 projects in her background are most relevant?
+4. What specific combination makes her different from other applicants?
+5. Is {{ company }} a startup, large company, AI/research lab, healthcare, or fintech/infra? This determines the work-style language in paragraph 3.
+
+---
+
+OUTPUT — produce in exactly this order, nothing else:
+
+Subject: <subject line>
+
+<catchy opening line>
+
+<paragraph 1>
+
+<paragraph 2>
+
+<paragraph 3>
+
+<closing line>
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+CITATIONS:
+[1] "<claim from letter>" → background source: "<exact phrase from her background>"
+[2] ...
+
+---
+
+SUBJECT LINE:
+- Under 10 words, specific to this role and {{ company }}
+- Sounds like a real person's email subject — sharp, direct, human
+- Completely different from the catchy opening line — do not repeat it
+- No emojis. No "excited about your mission."
+- Good examples (write a fresh one, do not copy):
+  "ML Engineer who ships agentic systems in production"
+  "Re: {{ role }} — Anshika Bajpai"
+  "3 years production ML, Indiana University May 2026"
+
+---
+
+CATCHY OPENING LINE — one standalone sentence before paragraph 1:
+This is separate from the subject line and from paragraph 1. It sets the tone.
+Pick ONE option that fits {{ company }} best:
+
+Option A — Wordplay or phrase tied to the company name or what they do:
+- Only use this if it feels natural and clever, not forced.
+- "Fireworks AI" → play on ignition, explosive speed, firing
+- "Sunbit" → "I won't let the sun set on a broken payment experience."
+- "Palo Alto Networks" → guarding perimeters, defense, keeping things secure
+- Write a fresh line. Do not copy these examples.
+
+Option B — A sharp insight about what {{ company }} is doing that a curious engineer would actually notice:
+- Not a compliment. An observation about why the problem is genuinely hard or interesting.
+- "Scaling LLM inference without trading away model flexibility is not a DevOps problem — it is a systems research problem."
+- "Most scheduling tools optimize for efficiency. Hospital workforce management has to optimize for humans — that is a completely different problem."
+- Write a fresh line specific to {{ company }}. Do not copy these examples.
+
+Option C — A punchy, grounded line about Anshika that is immediately relevant to this role:
+- Only use claims that exist in her background. Do not invent.
+- "I have spent three years building ML systems that have to work under real load — not just in notebooks."
+- "Most engineers pick research depth or shipping speed. My background sits at both."
+- Write a fresh line. Do not copy these examples.
+
+This line must NOT be repeated anywhere in the letter body.
+
+---
+
+PARAGRAPH 1 — Company interest + Anshika intro (3–4 sentences):
+- 1–2 sentences on what {{ company }} is doing and what specifically makes it interesting — their technical approach, the problem they are solving, why it is hard or different. This should feel like Anshika actually thought about this company, not like she Googled their tagline.
+- One sentence introducing Anshika: Master's in Data Science, Indiana University, May 2026, and her actual years of experience from her background (never invent this number).
+- Identity openers ("As a researcher", "As a machine learning engineer", "As someone who") are allowed only if her background clearly supports that claim for this role.
+- Do NOT use: "I am applying for", "I came across", "I am excited", "I have always been fascinated", "I am writing to express", "aligns perfectly", "I am drawn to", "I am confident that."
+
+---
+
+PARAGRAPH 2 — Real experience + real projects + real impact (4–6 sentences):
+This paragraph must be entirely grounded in her background. Every sentence citable.
+
+Priority order:
+1. Most relevant work experience or internship — use the EXACT company name and role title from her background. What did she build? What was the real measured impact (use only numbers from her background)? Connect it directly to what {{ company }} is doing.
+2. Then 1–2 specific projects by their ACTUAL names from her background. What did each project do, what tech, what was the outcome. Tie each to what this role needs.
+
+**Bold** the strongest real achievement or metric.
+Mention project names and company names naturally — they prove the claims are real.
+
+---
+
+PARAGRAPH 3 — Skills + ownership + what she brings (4–5 sentences):
+Write in flowing, natural, conversational sentences. Not a list, not a dump of skills.
+
+- Name relevant technical skills from her background that map to this role. Weave them into sentences naturally — "I built X using Y" not "I have skills in X, Y, Z."
+- Describe her work style in the right language for the company type detected:
+  * Startup / early-stage: "I have led end-to-end..." — owns the full problem, builds from zero, ships without hand-holding, moves fast, wears many hats, does not need tickets handed to them
+  * Large company: led cross-functional work, operated at scale, influenced decisions across teams, systems thinking, leadership
+  * AI / research lab: ran rigorous experiments, evaluated model quality, designed reproducible systems, cares about what actually works in production not just benchmarks
+  * Healthcare: reliability, working with sensitive data, operational impact on care delivery
+  * Fintech / infra: correctness, trust, uptime, risk-aware decisions
+- End with one sentence on what she brings that other candidates do not — a real, specific combination from her background. Not "I am a fast learner." Something concrete.
+
+End paragraph 3 with these two lines on their own:
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+
+CLOSING LINE — one standalone sentence after paragraph 3, before contact info:
+Confident, forward-looking, specific to this role or company.
+Expresses her conviction — what she believes she can do or contribute if given the opportunity.
+NOT: "I look forward to hearing from you", "I am eager to", "I would love to", "I am confident I will."
+Write a fresh one that fits {{ company }}. Examples of the right tone (do not copy):
+- "I don't need tickets handed to me — I find the problem, structure it, and ship."
+- "If you are building [X], I want to be the engineer who makes it production-ready."
+- "When the model breaks at 2am, I want to be the one who already wrote the runbook."
+- "I am ready to own this from day one — not after a three-month ramp."
+
+---
+
+TONE RULES:
+- Write like a real, sharp person — not a cover letter template, not AI-generated filler
+- Short sentences. Active voice. First person.
+- Show genuine interest through specific observations about {{ company }}, not by claiming to be passionate or excited
+- Conversational but confident — like a smart engineer writing to someone they respect
+- Every sentence must be specific enough that it could not appear in someone else's letter to a different company
+
+BANNED WORDS — do not use any of these under any circumstances:
+leveraged, passionate, excited about, thrilled, fascinated, realm, domain, real-world,
+cutting-edge, innovative, robust, seamless, dynamic, transformative, synergy, spearheaded,
+I am writing to express, I believe I would, I am confident that, I am a great fit,
+strong foundation, honed my skills, aligns perfectly, proven track record,
+I look forward to hearing from you, I am drawn to, unique opportunity,
+I am eager, empower, facilitate, landscape, ecosystem, journey, seasoned,
+[Previous Company], placeholder, meaningful contribution, delve, utilize, demonstrate
+
+FORMATTING:
+- **Bold** key achievements, metrics, standout skills using markdown bold
+- No bullet points inside the letter
+- No section headers inside the letter body
+- Contact info appears EXACTLY ONCE — at the very end, each item on its own line
+- Output: subject → catchy line → paragraphs → closing line → contact info → citations
+- Zero commentary before or after. Just the output.
+
+Write now.

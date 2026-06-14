@@ -1,0 +1,193 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+STRICT GROUNDING RULES — read before anything else:
+1. Every single claim, number, company name, project name, job title must come directly from Anshika's background below. If it is not there, do not write it.
+2. NEVER use "[Previous Company]" or any placeholder. Use the actual company name from her background or skip the sentence.
+3. NEVER invent years of experience. Use only what is in her background. If it says 3 years, write 3 years.
+4. NEVER invent project names. Use actual project names from her background.
+5. NEVER invent metrics. Use actual numbers from her background or skip the metric entirely.
+6. After drafting, mentally check each sentence: "Is this in her background?" If no — delete it.
+
+---
+
+ANSHIKA'S BACKGROUND — only source of truth. Cite from this only:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — tells you which parts of her background matter most. Do NOT copy its language or use it to invent her experience:
+{{ jd }}
+{% endif %}
+
+---
+
+OUTPUT FORMAT — produce exactly in this order, nothing else:
+
+Subject: <subject line>
+
+<cover letter — 4 paragraphs>
+
+---
+
+SUBJECT LINE:
+- Under 10 words, specific to this role at {{ company }}
+- Sharp, human, real — like a person's actual email subject
+- No emojis. No "excited about your mission."
+- Good examples: "ML Engineer who ships agentic systems in production" / "Re: {{ role }} — Anshika Bajpai" / "Data Science MS, IU — 3 years production ML"
+
+---
+
+COVER LETTER STRUCTURE:
+
+== PARAGRAPH 1 — Catchy opening + genuine company interest + Anshika intro ==
+
+The opening line is the most important sentence. Make it memorable. Pick ONE:
+
+Option A — Wordplay or phrase tied to the company name or what they do:
+- "Fireworks AI" → something about igniting, explosive speed, firing on all cylinders
+- "Sunbit" → "I'll never let the sun set on a broken payment experience"
+- "Palo Alto Networks" → something about guarding the perimeter
+Be clever but not forced. If wordplay feels awkward, use Option B or C.
+
+Option B — A sharp, specific observation about what {{ company }} is doing that a smart engineer would notice:
+- Not "I admire your mission." Not marketing copy.
+- Something like: "Most inference platforms optimize for cost or speed — rarely both at the same time. That tradeoff is what makes what Fireworks is doing genuinely hard."
+- Or: "Scaling LLM inference to sub-100ms latency across models nobody else has optimized — that is not a product problem, it is a research problem dressed in production clothing."
+
+Option C — A punchy line about Anshika that is immediately relevant:
+- "I have spent the last three years building systems that have to work — not just in notebooks, but under real load, with real users."
+- "Most engineers I know pick either research depth or shipping speed. I have spent my career doing both."
+
+After the opening line:
+- 1–2 sentences about what {{ company }} is doing and what Anshika finds specifically interesting — their problem, their technical approach, something real. Make it feel personal and thought-through.
+- One tight intro sentence for Anshika: Master's in Data Science, Indiana University, May 2026, and her actual years of experience from her background (never invent this number).
+
+Do NOT use: "I am applying", "I came across", "I am excited", "I have always been fascinated", "I am writing to express", "aligns perfectly", "I am confident that", "I am drawn to."
+
+Identity openers ("As a researcher", "As a machine learning engineer", "As someone who") are allowed only if her background clearly supports that identity for this role.
+
+== PARAGRAPH 2 — Real experience + real projects + real impact ==
+
+This paragraph must be entirely grounded in her background. No exceptions.
+
+Priority order:
+1. Most relevant work experience or internship. Use the EXACT company name and role title from her background. Describe what she built and the real measured impact using only numbers from her background. Then tie it directly to what {{ company }} is building.
+2. Then 1–2 specific projects by their ACTUAL names from her background. Describe what each project does, what technologies it used, what the outcome was. Connect each to what this role needs.
+
+Citation rule: every time you mention a company, role, or project — it must be something you can point to in her background above.
+
+Bold the single strongest real achievement or metric.
+
+== PARAGRAPH 3 — Skills + ownership + what she brings ==
+
+Write in flowing, natural sentences — not a list, not bullet points.
+
+- Mention relevant technical skills from her background that map directly to this role. Be specific — name the skill and where it came from if possible.
+- Describe her work style in a way that fits the company type:
+  * Startup / early-stage: led end-to-end, built from zero, shipped without hand-holding, moved fast, owned the problem
+  * Large company: worked cross-functionally, built at scale, influenced decisions, led teams
+  * AI / research lab: ran experiments rigorously, evaluated model quality, designed reproducible systems
+  * Healthcare: worked with sensitive data, built for reliability, understood operational impact
+  * Fintech / infra: built for correctness and trust, understood uptime requirements
+- One sentence on what she brings that other candidates don't — a real combination from her background, not a generic claim.
+
+End this paragraph with (on separate lines at the end):
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+== PARAGRAPH 4 — Closing (3–4 lines total, not more) ==
+
+- One confident, forward-looking sentence that expresses what she believes she can do or contribute — specific to this company or role. This is NOT a vision statement. It is a direct, human sign-off that leaves an impression.
+- Do NOT use: "I look forward to hearing from you", "I am eager to", "I would love to", "I am confident I will"
+- Good examples of the right tone:
+  * "I don't need tickets handed to me — I find the problem, structure it, and ship."
+  * "If you're moving fast on this, I'm ready to match that pace."
+  * "Happy to get on a call and walk you through exactly what I've built."
+  * "I'd rather show you than tell you — a quick call would go a long way."
+
+Then contact info — each item on its own separate line:
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+
+---
+
+FEW-SHOT EXAMPLES — study these for tone, structure, and specificity. Do not copy them. Use them to understand what good looks like:
+
+EXAMPLE 1 (agentic systems role, B2B startup):
+---
+Subject: ML Engineer who's shipped agentic systems at scale
+
+I came across the AI Engineer role at Preemptive and wanted to reach out directly.
+
+I'm a Master's student in Data Science at Indiana University (graduating May 2026) with 3+ years of production ML and software engineering experience. The problem Preemptive is solving is one I find genuinely compelling: most IT operations tooling is reactive, and building agents that reason transparently across dependency graphs to prevent incidents before they happen is a fundamentally harder and more interesting engineering problem than anything in the current AIOps landscape.
+
+I've built production agentic systems from scratch — multi-tool orchestration, structured reasoning flows, and observable decision-making. At Palo Alto Networks, I built a multi-turn conversational agent with context compression and sliding-window memory serving 10,000+ employees, where reliability under real load was non-negotiable. I also built a multimodal agentic system evaluated at 91% tool-call accuracy with sub-200ms p95 latency, and designed evaluation frameworks that continuously measured whether systems were actually working in production.
+
+On the retrieval side, I've built RAG pipelines over complex, multi-source unstructured data with deduplication, content hashing, and real-time monitoring — which maps directly to what Preemptive is building across MDMs, ticketing systems, vulnerability scanners, and Slack.
+
+I don't need tickets handed to me. I find the problem, structure it, and ship.
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Resume attached.
+---
+
+EXAMPLE 2 (healthcare AI, early-stage):
+---
+Subject: Founding AI Engineer — healthcare infra background
+
+YouShift is tackling something deceptively complex: hospital workforce management. That's not just scheduling — it's coordinating clinicians, compliance, shift coverage, burnout constraints, budget realities, and real-time operational chaos. It's building an operating system for a living organism.
+
+Healthcare has been a consistent thread throughout my career. At Optum, I worked on large-scale healthcare processing systems, improving performance and reliability for operational workflows that directly supported care delivery. In research, I worked on medical imaging models, handling sensitive clinical data with reproducibility and rigor. Across roles, I've seen how fragmented systems and slow tooling create friction for teams already under pressure.
+
+As a founding AI engineer, I can contribute by designing scalable data pipelines, building robust backend systems, and developing ML models for forecasting, optimization, and intelligent staffing decisions. I bring experience in Python, distributed data processing, production ML deployment, RAG systems, and system performance optimization. I'm comfortable owning architecture end-to-end and turning ambiguous operational problems into structured, measurable solutions.
+
+Happy to get on a call and walk you through what I've built.
+
+Anshika Bajpai
++1 (930) 204-3030 (newline)
+anshikabajpai23@gmail.com (newline)
+My portfolio: https://bajpaianshika.netlify.app/
+Resume attached.
+---
+
+Key things these examples do:
+- Specific company observation in para 1, not generic praise
+- Real company names, real project descriptions, real metrics
+- Soft skills shown through what she built, not claimed directly
+- Contact info appears ONCE, at the very end, each on its own line
+- Closing line is sharp and human, not formal
+
+---
+
+TONE RULES:
+- Conversational, direct, specific — like a smart person writing an email, not a cover letter template
+- Short sentences over long ones. Active voice always.
+- Show interest through what you say about the company, not by claiming to be interested
+- Every sentence must be specific enough that it could not appear in someone else's letter
+
+BANNED WORDS — do not use any of these under any circumstances:
+leveraged, passionate, excited about, thrilled, fascinated, realm, domain, real-world,
+cutting-edge, innovative, robust, seamless, dynamic, transformative, synergy, spearheaded,
+I am writing to express, I believe I would, I am confident that, I am a great fit,
+strong foundation, honed my skills, aligns perfectly, proven track record,
+I look forward to hearing from you, I am drawn to, unique opportunity,
+I am eager, empower, facilitate, landscape, ecosystem, journey, seasoned,
+[Previous Company], placeholder, meaningful contribution
+
+CONTACT INFO RULE: Contact info appears EXACTLY ONCE — at the very end of paragraph 4. Never anywhere else in the letter.
+
+FORMATTING:
+- **Bold** key achievements, metrics, standout skills
+- No bullet points inside the letter
+- No headers inside the letter
+- Output subject line + letter only — zero commentary before or after
+
+Write now.

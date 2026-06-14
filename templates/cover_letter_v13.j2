@@ -1,0 +1,149 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+---
+
+GROUNDING RULES — read before writing anything:
+1. Every company name, role title, project name, and metric must come from Anshika's background below.
+2. Never invent facts. Never use "[Previous Company]" or placeholders.
+3. Never copy phrases from the JD and present them as her experience.
+4. If you cannot find something in her background — skip it or rewrite without it.
+5. Output a CITATIONS block at the end tracing every claim to her background.
+
+---
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION — use only to decide which parts of her background matter most:
+{{ jd }}
+{% endif %}
+
+---
+
+BEFORE WRITING — think through these questions first (do not output the answers, just use them to write better):
+1. What does {{ company }} actually do? What problem are they solving? What is the hard part of that problem?
+2. What is unique about {{ company }}'s position — what are most companies NOT doing that {{ company }} is?
+3. Which of Anshika's work experiences maps most directly to this role? What was she actually solving day-to-day?
+4. Which personal project shows her genuine interest in this problem space?
+5. What is the universal truth about this problem space that makes a reader nod — something that earns the opening line?
+6. Why would Anshika specifically want to work at {{ company }} long-term — not any company, THIS one?
+
+Use your own knowledge about {{ company }} to answer these. Do not copy from the JD. Think independently.
+
+---
+
+OUTPUT FORMAT — in exactly this order:
+
+Subject: <subject line>
+
+<opening line>
+
+<paragraph 1>
+
+<paragraph 2>
+
+<paragraph 3>
+
+<paragraph 4>
+
+<closing line>
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+CITATIONS:
+[1] "<claim>" → background: "<source phrase>"
+[2] ...
+
+---
+
+== SUBJECT LINE ==
+Simple and clean. Under 10 words. Just the role and name, or one sharp descriptor.
+Example: "Applied ML Engineer — Anshika Bajpai" / "ML Engineer, Indiana University May 2026 — Anshika Bajpai"
+
+== OPENING LINE ==
+One sentence. A universal truth or sharp insight about the problem space this role lives in.
+Not about {{ company }}. Not about Anshika. A broader observation that makes the reader nod.
+Fresh — written specifically for this role at {{ company }}.
+Examples of the right KIND of opener (do not copy, write a new one):
+- "Every AI project I've worked on eventually ran into the same bottleneck: inference."
+- "The hardest part of building an AI product isn't the model — it's keeping it working at 3am."
+- "Most ML systems work perfectly in notebooks. Making them work in production is a different problem entirely."
+
+== PARAGRAPH 1 — Why {{ company }} (3–4 sentences) ==
+Explain what {{ company }} is doing and why it is specifically interesting.
+"Most companies do X. {{ company }} is doing Y — and Y is the harder, more important problem."
+This should feel like an observation from someone who actually thought about the company, not a line from their About page.
+Then: one sentence introducing Anshika — Master's in Data Science, Indiana University, May 2026, actual years of experience from her background.
+
+== PARAGRAPH 2 — Real experience (4–5 sentences) ==
+Lead with her most relevant work experience from her background. Use the exact company name and role title.
+Explain what she was working on and WHY — what problem she was solving, not just what she did.
+Include real metrics from her background. **Bold** the strongest one.
+Add a second work experience or project briefly if relevant.
+Connect to what {{ company }} is building.
+
+== PARAGRAPH 3 — Personal project + genuine interest (3–4 sentences) ==
+Pick the most relevant personal project from her background.
+Describe what it does and what drives her to work on it.
+End with a "what keeps me working on it" insight — something that reveals genuine intellectual interest, not just technical capability.
+This paragraph should feel personal, not professional.
+
+== PARAGRAPH 4 — Long-term vision (3–4 sentences) ==
+Where does Anshika want to take her career long-term?
+Why does {{ company }} specifically fit that direction?
+What is the specific combination of work at {{ company }} that excites her — name actual things they do (inference, distributed systems, model serving, etc. — pulled from the JD or general knowledge).
+This paragraph must not work for any other company. It should only make sense for {{ company }}.
+Phrases like "I believe in end-to-end ownership", "I want to build things that last", "I care about impact, not demos" are good here.
+
+== CLOSING LINE ==
+One sentence. Specific to {{ company }} and what they're building.
+Ties her vision to their mission. Can use "I'd love to" if it feels genuine.
+NOT: "I look forward to hearing from you", "I am eager to", "Thank you for your consideration."
+Examples:
+- "If {{ company }} is trying to [specific thing], I'd love to help build that."
+- "I'm ready to own [specific thing at {{ company }}] from day one."
+- "When [specific challenge at {{ company }}] comes up, I want to be the one solving it."
+
+---
+
+TONE:
+- Write like a thoughtful engineer writing to someone they genuinely respect
+- Short sentences. Active voice. First person.
+- Explain the WHY behind her work, not just the WHAT
+- Show intellectual curiosity — not just competence
+- Personal enough that it only works for {{ company }} and this role
+
+ALLOWED (use naturally when they fit):
+- "I believe in end-to-end ownership"
+- "I care about impact"
+- "leadership", "ownership", "making things work in production"
+- "I'd love to" (in closing only, when genuine)
+- Identity openers in body paragraphs if grounded in her background
+
+BANNED:
+cutting-edge, innovative, robust, seamless, leveraged, passionate, excited about,
+thrilled, fascinated, realm, domain, real-world, dynamic, transformative, synergy,
+spearheaded, I am writing to express, I am confident that, I am a great fit,
+aligns perfectly, proven track record, I look forward to hearing from you,
+I am drawn to, unique opportunity, I am eager, empower, facilitate, ecosystem,
+journey, seasoned, meaningful contribution, delve, utilize, demonstrate,
+strong foundation, honed my skills, I am confident, cutting edge
+
+FORMATTING:
+- **Bold** strongest achievement or metric
+- No bullet points in the letter body
+- No section headers inside the letter
+- Contact info ONCE, at the very end, each item on its own line
+- Zero commentary — just the output
+
+Write now.

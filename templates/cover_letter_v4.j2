@@ -1,0 +1,110 @@
+You are writing a cover letter and email subject line for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+STRICT RULE: Only use facts from Anshika's background below. Do not invent roles, companies, metrics, products, or achievements. If something is not in her background, skip it.
+
+---
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION:
+{{ jd }}
+{% endif %}
+
+---
+
+OUTPUT FORMAT — produce both of these, in order:
+
+**Subject:** <one sharp subject line>
+
+<the cover letter>
+
+---
+
+SUBJECT LINE RULES:
+- One line, under 10 words
+- Specific to the role and company — not generic
+- Examples of good tone: "ML Engineer who's shipped agentic systems at scale" / "Applied ML — Indiana University, May 2026" / "Re: {{ role }} — Anshika Bajpai"
+- No clickbait. No emojis. No "Excited about your mission."
+
+---
+
+COVER LETTER STRUCTURE (3 paragraphs, strict):
+
+PARAGRAPH 1 — Hook + Who she is + Strongest relevant experience:
+
+Opening line (most important sentence in the letter):
+- Option A — Company angle: One sentence about what {{ company }} is doing that a genuinely curious person would find interesting. Not a PR line. Not "I've always admired." Something like: "The way {{ company }} [specific thing they do / problem they solve] is [why it's hard, interesting, or different]." If it's a consumer product Anshika may have used, add a personal touch naturally.
+- Option B — Self intro angle: One sharp, unique sentence that describes Anshika in a way that's instantly relevant to this role. Not "I am a passionate engineer." More like: "Most engineers I know pick either research depth or shipping speed — I've spent 3 years doing both in production."
+- Pick whichever opening fits better. DO NOT use both. DO NOT use "I am applying for", "I came across", "I am excited", "I have always been fascinated."
+
+After the opening:
+- Introduce Anshika in one tight sentence: her degree, university, graduation date, years of experience.
+- Lead immediately with the most relevant work experience or internship from her background. Name the company, what she built, measurable impact.
+- End para 1 with what makes her different from other applicants for this exact role — a specific combination, not a generic claim.
+- Bold the single strongest achievement or metric in this paragraph.
+
+PARAGRAPH 2 — Contribution + Relevant projects + Soft skills:
+
+- Open with a concrete sentence about how she contributes to {{ company }} specifically — tied to their product, problem space, or stage.
+- Mention 1–2 specific projects or technical skills from her background that directly map to the role. Be specific. Name the system, the outcome, the scale if available.
+- Reflect soft skills that match the company type:
+  * Startup / early-stage: ownership, building from scratch, shipping fast, no hand-holding
+  * Large / established company: scale, cross-functional leadership, systems thinking
+  * AI / research lab: rigor, evaluation, experimentation, model quality
+  * Healthcare / healthtech: reliability, sensitive data, operational impact
+  * Fintech / infra / security: correctness, trust, reliability
+- End with the portfolio link on its own line:
+  My portfolio: https://bajpaianshika.netlify.app/
+  Attaching my resume as well.
+- Bold 1–2 important skills or project outcomes in this paragraph.
+
+PARAGRAPH 3 — Closing (2–3 lines MAX):
+
+- One confident, specific closing sentence that fits the company/role. NOT "I look forward to hearing from you." Make it feel like a real person signing off with intent. Example styles:
+  * "I don't need tickets handed to me — I find the problem, structure it, and ship."
+  * "Happy to get on a call and show you exactly what I mean."
+  * "If you're moving fast on this, I'm ready."
+- Then contact info on separate lines (no sentence wrapping it):
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+
+---
+
+TONE — this is everything:
+- Write like a real, sharp person who is genuinely interested — not performing interest.
+- Short sentences. Active voice. No filler.
+- Personal and direct — "I built X" not "X was built"
+- Confident without being arrogant
+- Specific enough that this letter cannot be sent to any other company
+
+BANNED — do not use any of these words or phrases:
+leveraged, passionate, excited about, thrilled, fascinated, I am writing to express,
+I believe I would, I am confident that, I am a great fit, what excites me, deeply interested,
+strong foundation, honed my skills, robust, cutting-edge, innovative solutions, dynamic team,
+seamless, impactful solutions, aligns perfectly, proven track record, demonstrated ability,
+I look forward to hearing from you, seasoned, I am drawn to, it is my pleasure,
+unique opportunity, I am eager, I would love to
+
+FORMATTING:
+- Use **bold** for key achievements, metrics, and standout skills
+- No bullet points in the letter
+- No subject line header inside the letter body
+- No commentary before or after — output subject + letter only
+- Exactly 3 paragraphs
+
+RELEVANCE FILTER (apply silently before writing):
+- Which experience from her background best matches this role?
+- Which project is most relevant?
+- What makes her different from 100 other applicants for this exact role?
+- What's one genuine thing about {{ company }} worth saying?
+Use only the strongest, most relevant evidence. Skip everything else.
+
+Write now.

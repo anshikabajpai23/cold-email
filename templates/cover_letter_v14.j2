@@ -1,0 +1,152 @@
+You are writing a cover letter for Anshika Bajpai applying for {{ role }} at {{ company }}.
+{% if person_name %}Address it to {{ person_name }}{% if person_title %}, {{ person_title }}{% endif %}.{% endif %}
+
+---
+
+GROUNDING RULES:
+1. Every company name, role title, project name, metric must come from Anshika's background below.
+2. Never invent experience, motivation, or connections that aren't in her background.
+3. Never copy JD language and present it as her experience.
+4. Check each sentence: "Is this in her background?" If no — delete it.
+5. Never misrepresent what a project did. If her RegGAN project was medical image translation, do not call it an inference scalability project.
+
+---
+
+ANSHIKA'S BACKGROUND:
+{{ background_context }}
+
+Portfolio: https://bajpaianshika.netlify.app/
+
+---
+{% if jd %}
+JOB DESCRIPTION:
+{{ jd }}
+{% endif %}
+
+---
+
+STEP 1 — UNDERSTAND THE COMPANY (do this silently before writing anything):
+
+Answer these in your head. Do not output them. Use them to make every decision in the letter.
+
+A) What does {{ company }} actually do? Describe it in one sentence using your own knowledge — not the JD's words.
+B) What problem are they solving, and why is it genuinely hard or interesting?
+C) What kind of work does this role involve day-to-day? (simulation, inference, data pipelines, backend, CV, NLP, etc.)
+D) What is {{ company }}'s unique position — what are most companies NOT doing that {{ company }} is?
+E) Now test: "Is this company about AI infrastructure / inference?" or "Is this company about domain-specific AI (physics, healthcare, finance, etc.)?" — this determines which of Anshika's experiences to lead with.
+
+---
+
+STEP 2 — SELECT EVIDENCE (do this silently):
+
+Based on what {{ company }} actually does (from Step 1), rank Anshika's experiences:
+- If the company does domain-specific AI (science, engineering, healthcare, simulation): lead with her research experience and domain projects
+- If the company does AI infrastructure (inference, model serving, MLOps): lead with her production engineering experience
+- If the company does product/SaaS with ML: lead with her most impactful production work
+
+Pick the top 2 experiences or projects that genuinely match this company's domain. Ignore the rest, even if they're more impressive in general.
+
+---
+
+STEP 3 — WRITE THE LETTER
+
+OUTPUT FORMAT — in exactly this order:
+
+Subject: <subject line>
+
+<opening line>
+
+<paragraph 1>
+
+<paragraph 2>
+
+<paragraph 3>
+
+<paragraph 4>
+
+<closing line>
+
+Anshika Bajpai
++1 (930) 204-3030
+anshikabajpai23@gmail.com
+My portfolio: https://bajpaianshika.netlify.app/
+Please find my resume attached.
+
+---
+CITATIONS:
+[1] "<claim from letter>" → background: "<exact phrase from her background>"
+[2] ...
+
+---
+
+== SUBJECT LINE ==
+Simple. Under 10 words. Role and name, or one sharp descriptor.
+"Applied ML Engineer — Anshika Bajpai"
+
+== OPENING LINE ==
+One sentence. A sharp observation about the specific problem space {{ company }} operates in.
+This must FAIL the following test: "Could this opening be sent to three other companies in different spaces?"
+If yes — rewrite it. It must only work for {{ company }}.
+
+Good structure: "Most [people/companies/tools] do X. [The problem/{{ company }}] is about Y — and Y is a different problem entirely."
+Or: a specific truth about this domain that earns the reader's attention.
+
+Do NOT use: generic ML observations that work for any AI company ("the hardest part of AI is production", "inference is the bottleneck everywhere", etc.)
+
+== PARAGRAPH 1 — What {{ company }} is doing and why it matters (3–4 sentences) ==
+Explain what {{ company }} is specifically working on and what makes it interesting or important.
+Use the understanding from Step 1. This should sound like Anshika thought about this company specifically.
+"Most companies are doing X. {{ company }} is doing Y — and Y requires Z, which is a much harder problem."
+Then one sentence introducing Anshika: Master's in Data Science, Indiana University, May 2026, actual years of experience from her background.
+
+== PARAGRAPH 2 — Most relevant work experience (4–5 sentences) ==
+Use the experience selected in Step 2 that best matches {{ company }}'s domain.
+Explain what she was doing and WHY — what problem was she solving, not just what tools she used.
+Use the exact company name and role title from her background.
+Include real metrics from her background only. **Bold** the strongest one.
+Connect it to what {{ company }} does — but only if the connection is real, not forced.
+If the connection isn't direct, say what the skill was and why it transfers — don't invent relevance.
+
+== PARAGRAPH 3 — Second experience or personal project (3–4 sentences) ==
+The second most relevant experience or project from her background.
+Same rules: real names, real outcomes, explains WHY she worked on it.
+End with one line that shows genuine intellectual interest — what the work made her think about or care about.
+
+== PARAGRAPH 4 — Long-term vision + why {{ company }} (3–4 sentences) ==
+Where does Anshika want to go long-term?
+Why does {{ company }} specifically fit — not in general "AI infrastructure" terms, but in terms of what they uniquely do.
+This paragraph must only work for {{ company }}. If it could be copied into a letter for a different company, rewrite it.
+Phrases like "I believe in end-to-end ownership", "I want to build things that actually matter outside of benchmarks", "I care about impact, not demos" are good here if they're true.
+
+== CLOSING LINE ==
+One sentence. Specific to {{ company }}'s actual mission or product.
+"If {{ company }} is [specific thing they're doing], I'd love to help build that."
+NOT: "I look forward to hearing from you", "Thank you for your consideration", "I am eager to"
+
+---
+
+TONE:
+- Write like a thoughtful person who genuinely thought about this company
+- Short sentences. Active voice. First person.
+- Explain the WHY behind her work, not just the WHAT
+- Every sentence specific enough that it only works for THIS company and THIS role
+- If you catch yourself writing something that could go in any cover letter — delete it
+
+BANNED:
+cutting-edge, innovative, robust, seamless, leveraged, passionate, excited about,
+thrilled, fascinated, realm, domain, real-world, dynamic, transformative, synergy,
+spearheaded, I am writing to express, I am confident that, I am a great fit,
+aligns perfectly, proven track record, I look forward to hearing from you,
+I am drawn to, unique opportunity, I am eager, empower, facilitate, ecosystem,
+journey, seasoned, meaningful contribution, delve, utilize, demonstrate,
+strong foundation, honed my skills, what I find particularly compelling,
+what excites me, I'm drawn to, align closely, I have always been passionate
+
+FORMATTING:
+- **Bold** the strongest real achievement or metric
+- No bullet points inside the letter
+- No section headers inside the letter
+- Contact info ONCE at the very end, each item on its own line
+- Zero commentary — just the output
+
+Write now.
